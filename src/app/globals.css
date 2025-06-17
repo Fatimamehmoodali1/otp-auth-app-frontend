@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+  color: #333;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Card Container */
+.card-wrapper {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 32px;
+  background-color: #ffffffcc;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+/* Heading: Center Align */
+.card-wrapper h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Subtext under heading */
+.card-wrapper p {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+/* Form Inside Card */
+form {
+  width: 100%;
+  text-align: left;
+}
+
+/* Input Fields */
+input {
+  background-color: #fff5f9;
+  border: 1px solid #e0b3cc;
+  border-radius: 12px;
+  padding: 12px 16px;
+  margin-bottom: 16px;
+  width: 100%;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+input:focus {
+  outline: none;
+  border-color: #ec4899;
+  box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.3);
+}
+
+/* Labels */
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+/* Buttons */
+button {
+  border-radius: 12px;
+  padding: 12px 16px;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Flex Button Group with Space */
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+@media (min-width: 640px) {
+  .button-group {
+    flex-direction: row;
+  }
+}
+
+/* Responsive Utility */
+@media (max-width: 600px) {
+  .card-wrapper {
+    padding: 20px;
+  }
+
+  input {
+    font-size: 0.95rem;
+    padding: 10px 14px;
+  }
+
+  button {
+    padding: 10px 14px;
+    font-size: 0.95rem;
+  }
+}
